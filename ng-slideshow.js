@@ -7,7 +7,8 @@
 		".ng-slideshow img { width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transform:scale(1.1); z-index:0; }",
 		".ng-slideshow a:nth-of-type(odd) img { transform-origin:20% 40%; } .ng-slideshow a:nth-of-type(even) img { transform-origin:80% 40%; }",
 		"@keyframes ng-slideshow-fadeIn { 0% { opacity:0; transform:scale(1.0); z-index:1; } 50%, 100% { opacity:1; transform:scale(1.1); z-index:1; } }",
-		"@keyframes ng-slideshow-fadeOut { 0% { opacity:1; } 100% { opacity:0.5; } }";
+		"@keyframes ng-slideshow-fadeOut { 0% { opacity:1; } 100% { opacity:0.5; } }"
+	].join("\n");
 	
 	let slideshow = document.querySelector(".ng-slideshow");
 	slideshow.style.display = "inline-block";
