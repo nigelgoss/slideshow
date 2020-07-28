@@ -8,31 +8,12 @@
 		
 		
 		<!-- NG-SLIDESHOW START -->
-		<div id="ng-slideshow" style="width:80%; height:300px; display:inline-block; position:relative; overflow:hidden; margin:3px; border:3px solid lightgrey; ">
-			<style>
-				#ng-slideshow img { width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transform:scale(1.1); z-index:0; }
-				#ng-slideshow a:nth-of-type(odd) img { transform-origin:20% 40%; }
-				#ng-slideshow a:nth-of-type(even) img { transform-origin:80% 40%; }
-				@keyframes ng-slideshow-fadeIn { 0% { opacity:0; transform:scale(1.0); z-index:1; } 50%, 100% { opacity:1; transform:scale(1.1); z-index:1; } }
-				@keyframes ng-slideshow-fadeOut { 0% { opacity:1; } 100% { opacity:0.5; } }
-			</style>
+		<div class="ng-slideshow" style="width:80%; height:300px;">
 			<a href="resources/slideshow-01.jpg"><img src="resources/slideshow-01.jpg" /></a>
 			<a href="resources/slideshow-02.jpg"><img src="resources/slideshow-02.jpg" /></a>
 			<a href="resources/slideshow-03.jpg"><img src="resources/slideshow-03.jpg" /></a>
 			<a href="resources/slideshow-04.jpg"><img src="resources/slideshow-04.jpg" /></a>
-			<script>
-				(function () {
-					if (!NodeList.prototype.forEach) NodeList.prototype.forEach = Array.prototype.forEach;
-					let slideshow = document.querySelector("#ng-slideshow");
-					slideshow.querySelectorAll("img").forEach(function ($v, $i, $a) {
-						$v.onanimationend = function () {
-							$v.style.animation = "ng-slideshow-fadeOut 3s";
-							$a[(($i === $a.length - 1) ? 0 : $i+1)].style.animation = "ng-slideshow-fadeIn 10s";
-						}; 
-					});
-					slideshow.querySelector("img").style.animation = "ng-slideshow-fadeIn 10s";
-				})();	
-			</script>
+			<script src="ng-slideshow.js"></script>
 		</div>
 		<!-- NG-SLIDESHOW FINISH -->
 		
