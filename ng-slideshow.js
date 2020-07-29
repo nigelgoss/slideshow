@@ -7,6 +7,7 @@
 		slideshow.style.display = "inline-block";
 		slideshow.style.position = "relative";
 		slideshow.style.overflow = "hidden";
+		slideshow.style.borderRadius = "20px";
 
 		slideshow.querySelectorAll("img").forEach(function ($v, $i, $a) {
 			$v.addEventListener("animationend", function () {
